@@ -58,3 +58,39 @@ class Car3 extends React.Component {
     );
   }
 }
+
+//Changing state of an object
+class Car3 extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      brand: "audi",
+      model: "A5",
+      color: "grey",
+      year: "2018",
+    };
+  }
+
+  changeColor = () => {
+    this.setState({ color: "black" });
+  };
+
+  render() {
+    return (
+      <div>
+        <h1>
+          My car is an {this.state.brand}
+          the model is {this.state.model}
+          and color is {this.state.color}
+          procuction year was {this.state.year}
+        </h1>
+      </div>
+    );
+
+    <div>
+      <button type="button" onClick={this.changeColor}>
+        Change color
+      </button>
+    </div>;
+  }
+}
